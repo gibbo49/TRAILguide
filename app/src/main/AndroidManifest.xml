@@ -21,7 +21,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Controller.AppInfoActivity"></activity>
+        <activity android:name=".Controller.AppInfoActivity" />
+        <activity android:name=".Controller.CategoryItemsActivity"></activity>
     </application>
 
 </manifest>
