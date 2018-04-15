@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TRAILguide</string>
+    <string name="action_settings" />
+    <string name="trailguide">TRAILguide</string>
 </resources>
