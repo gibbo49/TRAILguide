@@ -2,8 +2,10 @@ package com.chrisgibson.trailguide.Controller
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.res.Configuration
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.GridLayoutManager
 import com.chrisgibson.trailguide.Adapter.ItemAdapter
 import com.chrisgibson.trailguide.R
 import com.chrisgibson.trailguide.Services.DataService
@@ -23,8 +25,18 @@ class CategoryItemsActivity : AppCompatActivity() {
 
         adapter = ItemAdapter(this, DataService.getItems(selectedCategory)) {item ->
             val itemDetailIntent = Intent(this, ItemDetailActivity::class.java)
-            startActivity(itemDeatilIntent)
+            startActivity(itemDetailIntent)
 
         }
+
+        var spanCount = 2
+        val orientation = resources.configuration.orientation
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            spanCount = 3
+        }
+
+        val layoutmanager = GridLayoutManager(this,spanCount)
+        itemListView.layoutManager = layoutmanager
+        itemListView.adapter = adapter
     }
 }
