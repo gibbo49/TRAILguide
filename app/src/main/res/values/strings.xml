@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">TRAILguide</string>
-    <string name="action_settings" />
     <string name="trailguide">TRAILguide</string>
+    <string name="vectors_market_nanbileru_adaleru_nandrejs_kirma">Vectors Market \nAnbileru Adaleru \nAndrejs Kirma</string>
+    <string name="back_to_the_app">back to the app</string>
+    <string name="artwork_supplied_by">Artwork Supplied By:</string>
+    <string name="this_app_is_built_as_a_final_project_n_of_the_n_devslopes_android_beginner_track">This app is built as a Final Project \n of the \n Devslopes Android Beginner Track.</string>
+    <string name="devslopes_logo">Devslopes Logo</string>
+
 </resources>
