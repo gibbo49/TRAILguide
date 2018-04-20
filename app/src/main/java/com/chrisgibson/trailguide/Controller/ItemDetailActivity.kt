@@ -8,6 +8,7 @@ import android.view.View
 import com.chrisgibson.trailguide.Model.Item
 import com.chrisgibson.trailguide.R
 import com.chrisgibson.trailguide.Utilities.EXTRA_ITEM
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_item_detail.*
 
 class ItemDetailActivity : AppCompatActivity() {
@@ -19,11 +20,15 @@ class ItemDetailActivity : AppCompatActivity() {
         val itemDetail = intent.getParcelableExtra<Item>(EXTRA_ITEM)
         val itemImage = itemDetail.image
         val resourceId = resources.getIdentifier(itemImage,"drawable",packageName)
+        val imageurl = itemDetail.imageurl
 
         itemTitleText.text = itemDetail.title
         itemDescText.text = itemDetail.desc
-        itemImageView.setImageResource(resourceId)
 
+        Picasso.get()
+                .load(imageurl)
+                .error(resourceId)
+                .into(itemImageView)
 
     }
 

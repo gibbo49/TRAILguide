@@ -45,7 +45,7 @@ class ItemAdapter(val context: Context, val items : List<Item>, val itemClick: (
                 itemView.setOnClickListener { itemClick(item) }
 
 
-            
+
         }
     }
 
