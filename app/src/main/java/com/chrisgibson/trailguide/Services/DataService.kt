@@ -6,12 +6,19 @@ import com.chrisgibson.trailguide.Model.Item
 object DataService {
 
     val categories = listOf(
-            Category("HIKING", "hiking"),
-            Category("CAMPING", "camping"),
-            Category("FISHING", "fishing"),
-            Category("SURFING", "surfing"),
-            Category("DIVING", "diving")
+            //Holly Mandarich
+            Category("HIKING", "hiking","https://images.unsplash.com/photo-1501554728187-ce583db33af7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f20c7f5ad769d9bed0d1104fca8f5074&auto=format&fit=crop&w=1234&q=80"),
+            //Chris Schog
+            Category("CAMPING", "camping","https://images.unsplash.com/photo-1496080174650-637e3f22fa03?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7ca353cfcc4299e6c3d431ff862e1cf&auto=format&fit=crop&w=2206&q=80"),
+            //Austin Neil
+            Category("FISHING", "fishing","https://images.unsplash.com/photo-1480368319110-63b1454a3fa6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=86dd420592ad289630f40ff8e28e716c&auto=format&fit=crop&w=2250&q=80"),
+            //Jeremy Bishop
+            Category("SURFING", "surfing","https://images.unsplash.com/photo-1503293962593-47247718a17a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2b03e5e9c2171a7b779f99f4226122d8&auto=format&fit=crop&w=2249&q=80"),
+            //Mari Martin
+            Category("DIVING", "diving","https://images.unsplash.com/photo-1441933968071-73ceb22464f8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fce315aedf4f376b985e95110fe9245c&auto=format&fit=crop&w=2167&q=80")
     )
+
+
     val hiking = listOf(
             Item("BACKPACK",
                     "backpack",

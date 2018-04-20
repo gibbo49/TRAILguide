@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.chrisgibson.trailguide.Model.Category
 import com.chrisgibson.trailguide.R
+import com.squareup.picasso.Picasso
 
 class CategoryAdapter(val context: Context, val categories: List<Category>, val itemClick: (Category)-> Unit) : RecyclerView.Adapter<CategoryAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -31,11 +32,19 @@ class CategoryAdapter(val context: Context, val categories: List<Category>, val 
         val categoryName = itemView?.findViewById<TextView>(R.id.categoryName)
 
         fun bindCategory (category: Category, context: Context){
+            val urlid = category.url
             val resourceId = context.resources.getIdentifier(category.image,
                     "drawable", context.packageName)
-            categoryImage?.setImageResource(resourceId)
+            Picasso.get()
+                    .load(urlid)
+                    .placeholder(resourceId)
+                    .error(resourceId)
+                    .into(categoryImage)
             categoryName?.text = category.title
             itemView.setOnClickListener { itemClick(category) }
+
+
+
         }
     }
 }
