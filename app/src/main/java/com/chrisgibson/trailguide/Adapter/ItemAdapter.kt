@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import com.chrisgibson.trailguide.Model.Item
 import com.chrisgibson.trailguide.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_category_items.view.*
 
 class ItemAdapter(val context: Context, val items : List<Item>, val itemClick: (Item) -> Unit): RecyclerView.Adapter<ItemAdapter.ItemHolder>(){
@@ -28,12 +30,22 @@ class ItemAdapter(val context: Context, val items : List<Item>, val itemClick: (
     inner class ItemHolder(itemView: View?, val itemClick: (Item) -> Unit) : RecyclerView.ViewHolder(itemView) {
 
         val itemImage = itemView?.findViewById<ImageView>(R.id.itemImage)
+        val itemText = itemView?.findViewById<TextView>(R.id.itemText)
 
         fun bindProduct(item:Item,context: Context) {
-        val resourceID = context.resources.getIdentifier(item.image,
-                "drawable",context.packageName)
-            itemImage?.setImageResource(resourceID)
-            itemView.setOnClickListener { itemClick(item) }
+                val urlid = item.imageurl
+                val resourceId = context.resources.getIdentifier(item.image,
+                        "drawable", context.packageName)
+                Picasso.get()
+                        .load(urlid)
+                        .placeholder(resourceId)
+                        .error(resourceId)
+                        .into(itemImage)
+                itemText?.text = item.title
+                itemView.setOnClickListener { itemClick(item) }
+
+
+            
         }
     }
 
