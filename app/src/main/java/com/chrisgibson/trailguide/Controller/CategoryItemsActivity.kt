@@ -10,6 +10,7 @@ import com.chrisgibson.trailguide.Adapter.ItemAdapter
 import com.chrisgibson.trailguide.R
 import com.chrisgibson.trailguide.Services.DataService
 import com.chrisgibson.trailguide.Utilities.EXTRA_CATEGORY
+import com.chrisgibson.trailguide.Utilities.EXTRA_ITEM
 import kotlinx.android.synthetic.main.activity_category_items.*
 
 class CategoryItemsActivity : AppCompatActivity() {
@@ -25,6 +26,7 @@ class CategoryItemsActivity : AppCompatActivity() {
 
         adapter = ItemAdapter(this, DataService.getItems(selectedCategory)) {item ->
             val itemDetailIntent = Intent(this, ItemDetailActivity::class.java)
+            itemDetailIntent.putExtra(EXTRA_ITEM,item)
             startActivity(itemDetailIntent)
 
         }

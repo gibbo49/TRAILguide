@@ -13,7 +13,7 @@ object DataService {
             Category("DIVING", "diving")
     )
     val hiking = listOf(
-            Item("BACKPACK","backpack","",""),
+            Item("BACKPACK","backpack","http://a.co/c5eKI4l","A backpack is handy for carrying all your gear. keeps your hands free for other things."),
             Item("BOOTS","boots","",""),
             Item("COMPASS","compass","",""),
             Item("FLASHLIGHT","flashlight","",""),

@@ -8,7 +8,7 @@
     tools:context=".Controller.ItemDetailActivity">
 
     <ImageView
-        android:id="@+id/itemDetailimageView"
+        android:id="@+id/itemImageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/backpack" />
 
     <TextView
-        android:id="@+id/ItemDetailTitleText"
+        android:id="@+id/itemTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -30,11 +30,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemDetailimageView"
+        app:layout_constraintTop_toBottomOf="@+id/itemImageView"
         tools:text="BACKPACK" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/itemDescText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -45,21 +45,22 @@
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/itemLinkbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ItemDetailTitleText"
+        app:layout_constraintTop_toBottomOf="@+id/itemTitleText"
         app:layout_constraintVertical_bias="0.075"
         tools:text="A backpack is handy for carrying all your gear. keeps your hands free for other things." />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/itemLinkbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:onClick="openLink"
         android:text="See On Amazon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
