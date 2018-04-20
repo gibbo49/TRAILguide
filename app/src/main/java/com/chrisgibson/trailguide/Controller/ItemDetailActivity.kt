@@ -29,7 +29,7 @@ class ItemDetailActivity : AppCompatActivity() {
 
     fun openLink (view: View){
         val itemUrl = intent.getParcelableExtra<Item>(EXTRA_ITEM)
-        val link = Uri.parse(itemUrl.url)
+        val link = Uri.parse(itemUrl.linkurl)
         val browser = Intent(Intent.ACTION_VIEW, link)
         startActivity(browser)
     }
