@@ -16,7 +16,7 @@ object DataService {
             Item("BACKPACK","backpack","",""),
             Item("BOOTS","boots","",""),
             Item("COMPASS","compass","",""),
-            Item("FLASHLIGHT","flashlight",,"",""),
+            Item("FLASHLIGHT","flashlight","",""),
             Item("MAP","map","",""),
             Item("ROPE","rope","",""),
             Item("TOOLS","tools","","")
