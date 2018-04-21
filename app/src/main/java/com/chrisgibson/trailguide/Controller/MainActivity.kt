@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.activity_main)
             setSupportActionBar(findViewById(R.id.toolbar))
 
-
-
             appInfo_btn.setOnClickListener {
                 val appInfoIntent = Intent(this, AppInfoActivity::class.java)
                 startActivity(appInfoIntent)
@@ -37,8 +35,4 @@ class MainActivity : AppCompatActivity() {
             categoryListView.layoutManager = layoutManager
             categoryListView.setHasFixedSize(true)
         }
-
-
-
-
 }

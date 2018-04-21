@@ -29,7 +29,6 @@ class ItemDetailActivity : AppCompatActivity() {
                 .load(imageurl)
                 .error(resourceId)
                 .into(itemImageView)
-
     }
 
     fun openLink (view: View){

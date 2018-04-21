@@ -19,7 +19,6 @@ class AppInfoActivity : AppCompatActivity() {
             startActivity(browser)
         }
 
-
         appInfoBackBtn.setOnClickListener {
             val appInfoBackIntent = Intent(this, MainActivity::class.java)
             startActivity(appInfoBackIntent)

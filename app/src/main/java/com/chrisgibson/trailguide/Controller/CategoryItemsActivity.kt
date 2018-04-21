@@ -18,8 +18,6 @@ class CategoryItemsActivity : AppCompatActivity() {
 
     lateinit var adapter : ItemAdapter
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_items)
@@ -33,14 +31,13 @@ class CategoryItemsActivity : AppCompatActivity() {
 
         }
 
-
         val spanCount = columnSpan()
 
         val layoutmanager = GridLayoutManager(this,spanCount)
         itemListView.layoutManager = layoutmanager
         itemListView.adapter = adapter
-
         }
+
     private fun columnSpan() : Int {
         var spanCount = 2
         val orientation = resources.configuration.orientation
@@ -49,7 +46,6 @@ class CategoryItemsActivity : AppCompatActivity() {
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) spanCount++
         if (screensize == Configuration.SCREENLAYOUT_SIZE_XLARGE) spanCount++
         return spanCount
-
     }
 }
 
