@@ -17,6 +17,7 @@ class CategoryItemsActivity : AppCompatActivity() {
 
     lateinit var adapter : ItemAdapter
 
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +32,24 @@ class CategoryItemsActivity : AppCompatActivity() {
 
         }
 
-        var spanCount = 2
-        val orientation = resources.configuration.orientation
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            spanCount = 3
-        }
+
+        val spanCount = columnSpan()
 
         val layoutmanager = GridLayoutManager(this,spanCount)
         itemListView.layoutManager = layoutmanager
         itemListView.adapter = adapter
+
+        }
+    private fun columnSpan() : Int {
+        var spanCount = 2
+        val orientation = resources.configuration.orientation
+        val screensize = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) spanCount++
+        if (screensize == Configuration.SCREENLAYOUT_SIZE_XLARGE) spanCount++
+        return spanCount
+
     }
 }
+
+

@@ -6,16 +6,12 @@ import com.chrisgibson.trailguide.Model.Item
 object DataService {
 
     val categories = listOf(
-            //Holly Mandarich
             Category("HIKING", "hiking","https://images.unsplash.com/photo-1501554728187-ce583db33af7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f20c7f5ad769d9bed0d1104fca8f5074&auto=format&fit=crop&w=1234&q=80"),
-            //Chris Schog
             Category("CAMPING", "camping","https://images.unsplash.com/photo-1496080174650-637e3f22fa03?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7ca353cfcc4299e6c3d431ff862e1cf&auto=format&fit=crop&w=2206&q=80"),
-            //Austin Neil
             Category("FISHING", "fishing","https://images.unsplash.com/photo-1480368319110-63b1454a3fa6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=86dd420592ad289630f40ff8e28e716c&auto=format&fit=crop&w=2250&q=80"),
-            //Jeremy Bishop
             Category("SURFING", "surfing","https://images.unsplash.com/photo-1503293962593-47247718a17a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2b03e5e9c2171a7b779f99f4226122d8&auto=format&fit=crop&w=2249&q=80"),
-            //Mari Martin
-            Category("DIVING", "diving","https://images.unsplash.com/photo-1441933968071-73ceb22464f8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fce315aedf4f376b985e95110fe9245c&auto=format&fit=crop&w=2167&q=80")
+            Category("DIVING", "diving","https://images.unsplash.com/photo-1441933968071-73ceb22464f8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fce315aedf4f376b985e95110fe9245c&auto=format&fit=crop&w=2167&q=80"),
+            Category("CODING","coding","https://scontent.fmel1-1.fna.fbcdn.net/v/t31.0-8/30171501_1366744683425851_263481611350053625_o.jpg?_nc_cat=0&oh=62b8c7e4983a50f34fde6049b60906ce&oe=5B6B5851")
     )
 
 
@@ -150,7 +146,22 @@ object DataService {
                     "backpack",
                     "http://a.co/c5eKI4l",
                     "A backpack is handy for carrying all your gear. keeps your hands free for other things.",
-                    "https://images-na.ssl-images-amazon.com/images/I/91d2nGxDkVL._SL1500_.jpg")
+                    "https://images-na.ssl-images-amazon.com/images/I/91d2nGxDkVL._SL1500_.jpg"),
+            Item("SURFBOARD",
+                    "surfboard",
+                    "http://a.co/gzAGegs",
+                    "Raystreak 7'2\" Crocodile Groove Soft Surfboard Beach Ocean Surfing Body Foamie Board",
+                    "https://images-na.ssl-images-amazon.com/images/I/816EIS6ArEL._SL1500_.jpg"),
+            Item("SUNSCREEN",
+                    "sunscreen",
+                    "http://a.co/bPZOGnH",
+                    "Sun Bum Original Moisturizing Sunscreen Lotion, 1 Count, Broad Spectrum UVA/UVB Protection, Hypoallergenic, Paraben Free, Gluten Free",
+                    "https://images-na.ssl-images-amazon.com/images/I/81PPdxjjxtL._SL1500_.jpg"),
+            Item("SHARK REPELLENT",
+                    "shark",
+                    "http://a.co/bWaJhI5",
+                    "Sharkbanz 2 Magnetic Shark Repellent Band",
+                    "https://images-na.ssl-images-amazon.com/images/I/511qHgj6aEL._SL1165_.jpg")
     )
     val diving = listOf(
             Item("FLIPPERS",
@@ -190,13 +201,48 @@ object DataService {
                     "https://images-na.ssl-images-amazon.com/images/I/71duwNqebUL._SL1001_.jpg")
     )
 
+    val coding = listOf(
+            Item("COMPUTER",
+                    "computer",
+                    "http://a.co/iLoxfT0",
+                    "Apple 15 MacBook Pro, Retina, Touch Bar, 2.9GHz Intel Core i7 Quad Core, 16GB RAM, 512GB SSD, Space Gray, MPTT2LL/A (Newest Version)",
+                    "https://images-na.ssl-images-amazon.com/images/I/61F99gFWolL._SL1024_.jpg"),
+            Item("BEARD",
+                    "beard",
+                    "http://a.co/8km7kkj",
+                    "If you can't grow your own, there is alway the fake kind. BeeSpring Novelty Fake Black Beard - Costume and Party",
+                    "https://images-na.ssl-images-amazon.com/images/I/61Zd7ZnX5tL._SL1200_.jpg"),
+            Item("DEVSLOPES 2.0",
+                    "logo414141",
+                    "http://devslopes.com",
+                    "Learn to code with Devslopes",
+                    "https://pbs.twimg.com/profile_images/960665614040776704/xglVxw4S.jpg"),
+            Item("COFFEE MUG",
+                    "mug",
+                    "https://coderswag.com/products/devslopes-mountains-mug",
+                    "Devslopes Mountains Mug",
+                    "https://cdn.shopify.com/s/files/1/1056/4958/products/mockup-0db1bab5_1024x1024.jpg?v=1515614924"),
+            Item("STRESS BALL",
+                    "stress",
+                    "http://a.co/ilygE9x",
+                    "Motivational Stress Ball Assortment, 3 Pack",
+                    "https://images-na.ssl-images-amazon.com/images/I/71BWrnY60kL._SL1500_.jpg"),
+            Item("MOUSE",
+                    "mouse",
+                    "http://a.co/ee0gjxh",
+                    "Using the trackpad gets old real fast. Apple Magic Bluetooth Wireless Laser Mouse",
+                    "https://images-na.ssl-images-amazon.com/images/I/61eA56QH5yL._SL1500_.jpg")
+
+    )
+
     fun getItems(category: String):List<Item>{
         return when(category) {
             "HIKING" -> hiking
             "CAMPING" -> camping
             "FISHING" -> fishing
             "SURFING" -> surfing
-            else -> diving
+            "DIVING" -> diving
+            else -> coding
         }
     }
 }

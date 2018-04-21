@@ -1,7 +1,9 @@
 package com.chrisgibson.trailguide.Model
 
+
 import android.os.Parcel
 import android.os.Parcelable
+
 
 class Item(val title: String, val image : String, val linkurl : String, val desc : String, val imageurl :String) : Parcelable {
     constructor(parcel: Parcel) : this(
@@ -10,10 +12,6 @@ class Item(val title: String, val image : String, val linkurl : String, val desc
             parcel.readString(),
             parcel.readString(),
             parcel.readString()) {
-    }
-
-    override fun toString(): String {
-        return title
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

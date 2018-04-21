@@ -37,7 +37,7 @@ class ItemAdapter(val context: Context, val items : List<Item>, val itemClick: (
                 val resourceId = context.resources.getIdentifier(item.image,
                         "drawable", context.packageName)
                 Picasso.get()
-                        .load(urlid)
+                        .load(resourceId)
                         .placeholder(resourceId)
                         .error(resourceId)
                         .into(itemImage)

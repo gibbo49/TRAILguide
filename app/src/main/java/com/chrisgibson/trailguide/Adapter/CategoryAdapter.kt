@@ -37,7 +37,7 @@ class CategoryAdapter(val context: Context, val categories: List<Category>, val 
                     "drawable", context.packageName)
             Picasso.get()
                     .load(urlid)
-                    .resize(540,325)
+                    .resize(540,400)
                     .centerCrop()
                     .error(resourceId)
                     .into(categoryImage)
