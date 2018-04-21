@@ -10,5 +10,6 @@
     <string name="see_online">see online</string>
     <string name="item_image">Item Image</string>
     <string name="category_image">Category Image</string>
+    <string name="logo">Logo</string>
 
 </resources>
