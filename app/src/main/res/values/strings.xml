@@ -11,5 +11,6 @@
     <string name="item_image">Item Image</string>
     <string name="category_image">Category Image</string>
     <string name="logo">Logo</string>
+    <string name= "selected_category">%1$s GEAR</string>
 
 </resources>
