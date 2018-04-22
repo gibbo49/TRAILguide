@@ -8,6 +8,7 @@ import android.view.View
 import com.chrisgibson.trailguide.Model.Item
 import com.chrisgibson.trailguide.R
 import com.chrisgibson.trailguide.Utilities.EXTRA_ITEM
+import com.chrisgibson.trailguide.Utilities.SWITCH
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_item_detail.*
 
@@ -25,11 +26,20 @@ class ItemDetailActivity : AppCompatActivity() {
         itemTitleText.text = itemDetail.title
         itemDescText.text = itemDetail.desc
 
-        Picasso.get()
-                .load(imageurl)
-                .placeholder(resourceId)
-                .error(resourceId)
-                .into(itemImageView)
+        if (SWITCH == "urlId") {
+            Picasso.get()
+                    .load(imageurl)
+                    .placeholder(resourceId)
+                    .error(resourceId)
+                    .into(itemImageView)
+        }
+        else {
+            Picasso.get()
+                    .load(resourceId)
+                    .placeholder(resourceId)
+                    .error(resourceId)
+                    .into(itemImageView)
+        }
     }
 
     fun openLink (view: View){
@@ -39,3 +49,4 @@ class ItemDetailActivity : AppCompatActivity() {
         startActivity(browser)
     }
 }
+
