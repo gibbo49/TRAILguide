@@ -57,7 +57,7 @@
         android:id="@+id/itemLinkbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:onClick="openLink"
@@ -65,7 +65,11 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline9" />
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        android:background="@drawable/trailguide_button"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:textColor="@color/colorAccent"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
