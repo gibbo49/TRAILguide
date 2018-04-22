@@ -6,12 +6,14 @@ import android.content.res.Configuration
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
+import android.widget.Toast
 import com.chrisgibson.trailguide.Adapter.ItemAdapter
 import com.chrisgibson.trailguide.Model.Category
 import com.chrisgibson.trailguide.R
 import com.chrisgibson.trailguide.Services.DataService
 import com.chrisgibson.trailguide.Utilities.EXTRA_CATEGORY
 import com.chrisgibson.trailguide.Utilities.EXTRA_ITEM
+import com.chrisgibson.trailguide.Utilities.SWITCH
 import kotlinx.android.synthetic.main.activity_category_items.*
 
 class CategoryItemsActivity : AppCompatActivity() {
@@ -23,6 +25,21 @@ class CategoryItemsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_category_items)
         val selectedCategory = intent.getStringExtra(EXTRA_CATEGORY)
         selectedCategoryText.text = getString(R.string.selected_category, selectedCategory)
+
+        if(SWITCH=="urlId"){
+            itemSwitch.isChecked = true
+        }else {
+        }
+
+        itemSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                SWITCH = "urlId"
+                itemListView.adapter.notifyDataSetChanged()
+            } else {
+                SWITCH = "resourceId"
+                itemListView.adapter.notifyDataSetChanged()
+            }
+        }
 
         adapter = ItemAdapter(this, DataService.getItems(selectedCategory)) {item ->
             val itemDetailIntent = Intent(this, ItemDetailActivity::class.java)

@@ -12,5 +12,6 @@
     <string name="category_image">Category Image</string>
     <string name="logo">Logo</string>
     <string name= "selected_category">%s GEAR</string>
+    <string name="show_item_images_off_on">Show Item Images Off/On</string>
 
 </resources>

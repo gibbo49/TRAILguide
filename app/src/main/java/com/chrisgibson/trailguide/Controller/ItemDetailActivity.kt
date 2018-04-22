@@ -27,6 +27,7 @@ class ItemDetailActivity : AppCompatActivity() {
 
         Picasso.get()
                 .load(imageurl)
+                .placeholder(resourceId)
                 .error(resourceId)
                 .into(itemImageView)
     }

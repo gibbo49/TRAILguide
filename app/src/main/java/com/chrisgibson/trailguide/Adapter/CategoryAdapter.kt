@@ -11,9 +11,14 @@ import com.chrisgibson.trailguide.Model.Category
 import com.chrisgibson.trailguide.R
 import com.squareup.picasso.Picasso
 
+
+
+
 class CategoryAdapter(val context: Context, val categories: List<Category>, val itemClick: (Category)-> Unit) : RecyclerView.Adapter<CategoryAdapter.Holder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context)
+        val view = LayoutInflater
+                .from(context)
                 .inflate(R.layout.category_list, parent, false)
         return Holder(view, itemClick)
     }
@@ -43,9 +48,6 @@ class CategoryAdapter(val context: Context, val categories: List<Category>, val 
                     .into(categoryImage)
             categoryName?.text = category.title
             itemView.setOnClickListener { itemClick(category) }
-
-
-
         }
     }
 }

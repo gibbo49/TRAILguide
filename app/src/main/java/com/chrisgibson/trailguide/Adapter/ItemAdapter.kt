@@ -9,8 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.chrisgibson.trailguide.Model.Item
 import com.chrisgibson.trailguide.R
+import com.chrisgibson.trailguide.Utilities.SWITCH
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_category_items.view.*
 
 class ItemAdapter(val context: Context, val items : List<Item>, val itemClick: (Item) -> Unit): RecyclerView.Adapter<ItemAdapter.ItemHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
@@ -33,20 +33,30 @@ class ItemAdapter(val context: Context, val items : List<Item>, val itemClick: (
         val itemText = itemView?.findViewById<TextView>(R.id.itemText)
 
         fun bindProduct(item:Item,context: Context) {
-                val urlid = item.imageurl
-                val resourceId = context.resources.getIdentifier(item.image,
-                        "drawable", context.packageName)
-                Picasso.get()
-                        .load(resourceId)
-                        .placeholder(resourceId)
-                        .error(resourceId)
-                        .into(itemImage)
-                itemText?.text = item.title
-                itemView.setOnClickListener { itemClick(item) }
 
-
-
+                if (SWITCH == "urlId") {
+                    val urlId = item.imageurl
+                    val resourceId = context.resources.getIdentifier(item.image,
+                            "drawable", context.packageName)
+                    Picasso.get()
+                            .load(urlId)
+                            .placeholder(resourceId)
+                            .error(resourceId)
+                            .into(itemImage)
+                    itemText?.text = item.title
+                    itemView.setOnClickListener { itemClick(item) }
+                }
+                else {
+                    val resourceId = context.resources.getIdentifier(item.image,
+                            "drawable", context.packageName)
+                    Picasso.get()
+                            .load(resourceId)
+                            .placeholder(resourceId)
+                            .error(resourceId)
+                            .into(itemImage)
+                    itemText?.text = item.title
+                    itemView.setOnClickListener { itemClick(item) }
+                }
         }
     }
-
 }
