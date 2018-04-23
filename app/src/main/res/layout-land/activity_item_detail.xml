@@ -64,7 +64,11 @@
         android:text="@string/see_online"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline9" />
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        android:background="@drawable/trailguide_button"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:textColor="@color/colorAccent"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
